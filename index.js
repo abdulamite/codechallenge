@@ -73,7 +73,7 @@ let evens = [0,2,4,6,8,10];
 let odds = [1,3,5,7,9,11];
 
 function combinedArr(arr1,arr2){
-    let combined = [...evens, ...odds];
+    let combined = [...arr1, ...arr2];
     return combined;
 }
 
@@ -89,12 +89,32 @@ let unsorted = [9,5,6,11,15,3,12,24,22,17];
 
 function simpleSort(arr){
     let sorted = arr.sort((a,b)=>{
-        return a<b ? 0:1;
+        return a > b ? 1 : -1
     });
-    console.log(sorted);
     return sorted;
 }
 
 
 console.log(`Simple Sort Test`);
 console.log(JSON.stringify(simpleSort(unsorted)) === JSON.stringify([3,5,6,9,11,12,15,17,22,24]));
+// 6. Write a function that returns a random array of length n 
+
+function generateRandomArray(length){
+    let randomArray = [];
+    for(let i=0; i<=length;i++){
+        randomArray.push(Math.floor((Math.random() * 100)+1));
+    }
+    return randomArray;
+}
+
+console.log(generateRandomArray(10));
+console.log(generateRandomArray(25));
+
+// Below function with sort a random array of length n
+console.log('Sorted Random Array')
+console.log(simpleSort(generateRandomArray(30)));
+console.log(simpleSort(combinedArr(generateRandomArray(2), generateRandomArray(7))));
+console.log(simpleSort(combinedArr(generateRandomArray(12), generateRandomArray(3))));
+
+
+
