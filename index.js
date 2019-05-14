@@ -74,7 +74,6 @@ let odds = [1,3,5,7,9,11];
 
 function combinedArr(arr1,arr2){
     let combined = [...evens, ...odds];
-    console.log(combined);
     return combined;
 }
 
@@ -82,3 +81,20 @@ function combinedArr(arr1,arr2){
 console.log(`Combined Arr Test`);
 //Need to convert to JSON because you cannot simply compare arrays. Need to pass by value and compare values vs arr contents
 console.log(JSON.stringify(combinedArr(evens,odds)) === JSON.stringify([0,2,4,6,8,10,1,3,5,7,9,11]));
+
+
+// 5. Write a simple sort function that expects and array and sorts it. 
+
+let unsorted = [9,5,6,11,15,3,12,24,22,17];
+
+function simpleSort(arr){
+    let sorted = arr.sort((a,b)=>{
+        return a<b ? 0:1;
+    });
+    console.log(sorted);
+    return sorted;
+}
+
+
+console.log(`Simple Sort Test`);
+console.log(JSON.stringify(simpleSort(unsorted)) === JSON.stringify([3,5,6,9,11,12,15,17,22,24]));
