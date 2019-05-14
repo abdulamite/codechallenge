@@ -15,6 +15,7 @@ function strReverse(str){
     return backwards.join('');
 }
 
+console.log(`Str Reverse Test`);
 console.log(strReverse('abbc') === 'cbba');
 console.log(strReverse('dog') === 'god');
 console.log(strReverse('racecar') === 'racecar');
@@ -31,7 +32,7 @@ function simpleAdding(n){
     return total;
 }
 
-
+console.log(`Simple Adding Test`);
 console.log(simpleAdding(3) === 6);
 console.log(simpleAdding(4) === 10);
 console.log(simpleAdding(12) === 78);
@@ -61,6 +62,23 @@ function simpleSymbol(str){
     }
 }
 
-
+console.log(`Simple Symbol Test`);
 console.log(simpleSymbol("+d+=3=+s+") === true);
 console.log(simpleSymbol("f++d+") === false);
+
+
+// 4. Write a function that expects two arrays returns a combined array arr1 + arr2
+
+let evens = [0,2,4,6,8,10];
+let odds = [1,3,5,7,9,11];
+
+function combinedArr(arr1,arr2){
+    let combined = [...evens, ...odds];
+    console.log(combined);
+    return combined;
+}
+
+
+console.log(`Combined Arr Test`);
+//Need to convert to JSON because you cannot simply compare arrays. Need to pass by value and compare values vs arr contents
+console.log(JSON.stringify(combinedArr(evens,odds)) === JSON.stringify([0,2,4,6,8,10,1,3,5,7,9,11]));
