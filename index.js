@@ -118,3 +118,8 @@ console.log(simpleSort(combinedArr(generateRandomArray(12), generateRandomArray(
 
 
 
+// 7. Write a function to consume an API and list the contents of the response. 
+
+function getJoke(){
+    
+}
