@@ -118,3 +118,13 @@ console.log(simpleSort(combinedArr(generateRandomArray(12), generateRandomArray(
 
 
 
+// 7. Write a function to consume an API and list the contents of the response. 
+const axios = require('axios');
+async function getGitHubInfo(){
+    const data = await axios.get('https://api.github.com/users/abdulamite');
+    const {name, company} = data.data
+    console.log(name, company);
+    return data;
+}
+
+getGitHubInfo();
