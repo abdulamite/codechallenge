@@ -1,11 +1,11 @@
-1. What is the difference between git and GitHub. 
+1. What is the difference between git and GitHub?
 
 git is an open source distributed version control system. git allows you to set up working directories and track changes
 in the files in the directory. This allows you to develop locally, create banches, log and revert project changes. 
 GitHub is an online hosting service for git repos. This allows you to build an collaborate on projects together. This makes it easy for
 companys, and open source groups to fork repos, create local copies of the application, and submit pull requests to the master copy.
 
-2. How do you write a commit message. 
+2. How do you write a commit message?
 
 You can write a simple commit message by writting the following line:
 
@@ -15,3 +15,88 @@ The a flag tells the command to automatically stage files that have been modifie
 told Git about are not affected. This command by default opens a vim editior allowing you to write a message decribing the changes in the commit.
 It is important that this message highlights the file changes incase you need to trace when errors or issues arise in the application.
 
+3. What is a bare repository?
+
+A bare repo just contains version control information and no working files. You would use this when you would like to set up a remote repo
+allowing other users to fork the bare repo and submit pull requests to it. To initilize a bare repo simply run: 
+
+$ git init --bare
+
+4. What language is used in git? 
+
+git is built on C. This allows it to be faster than other high level languages.
+
+5. In Git how do you revert a commit that has already been pushed and made public?
+
+There are two ways to do this. 
+    1. Identify when the issue occured, resolve the issue, and push a new commit to resolve issues in the prior commit.
+    2. Run the following command:
+        $ git revert <commit name>
+    Reverting should be used when you want to apply the inverse of a commit from your project history. 
+    This can be useful, for example, if you’re tracking down a bug and find that it was introduced by a single commit. 
+    Instead of manually going in, fixing it, and committing a new snapshot, 
+    you can use git revert to automatically do all of this for you.
+
+6. What is cherry picking? 
+Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. 
+The frontend developer could use git cherry-pick to pick the commit in which this hypothetical data structure was created. 
+This pick would enable the frontend developer to continue progress on their side of the project.
+
+7. What is the difference between git pull and git fetch
+
+Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target 
+branch in your local repository.
+
+Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch, it pulls
+ all new commits from the desired branch and stores it in a new branch in your local repository. If you want to reflect these 
+ changes in your target branch, git fetch must be followed with a git merge. Your target branch will only be updated after merging
+ the target branch and fetched branch. Just to make it easy for you, remember the equation below:
+
+Because git fetch is just download the data and not applying it, it will not cause merge conflicts as this does not merge code into the current
+project.
+
+Git pull = git fetch + git merge
+
+8. What is the staging area in git?
+The staging area is where files from the working directories are added to once you run the git add command. To view changes once they are
+added you can run the git status command to view staged files. 
+
+9. How do you unstage a file you have added? 
+To unstage a file you run the following command: 
+
+$ git reset HEAD <file>
+
+10. Say you accidently made changes on master branch but it is out now out of sync with the remote master,
+    how can you pull from a remote git server to update your local repo?
+
+    To address this issue you can begin by doing the following:
+    // Save changes you have worked on
+    $ git stash save "Helpful message of changes that were made"
+
+    // Pull changes from remote repo to sync up local repo.
+    $ git pull <remote> <branch>
+    
+    // create a new branch
+    $ git branch <branch_name>
+    
+    // switch to new branch
+    $ git checkout <branch_name>
+
+    //Apply changes you previously made
+    $ git stash pop
+
+    // Resolve any merge conflicts that have occureds
+
+
+11. How do you submit a pull request? 
+When creating a pull request, it is ideal that you do this on a branch other than your master branch. 
+The workflow when creating a pull request is as follows. 
+
+    - Create a directory.
+    - Initilize the directory as a git directory.
+    - Add a remote git repo
+    - Pull from the master branch of the remote
+    - Create a new branch.
+    - Switch to the new branch.
+    - Make changes to the working directory.
+    - Add files, and push the new branch to the remote. 
