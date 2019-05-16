@@ -100,3 +100,46 @@ The workflow when creating a pull request is as follows.
     - Switch to the new branch.
     - Make changes to the working directory.
     - Add files, and push the new branch to the remote. 
+
+
+12. What is a git merge? 
+Merging combines your local changes with changes made by others. To merge simply run the following: 
+$ git merge remote/branch
+
+13. What is a rebase and how do you do it? 
+
+Rebasing allows you to feth changes from a remote and merge them into your local project. To do this:
+
+- Add the remote origin
+- Fetch the remote origin
+- run $ git rebase upstream/master
+- This will essentially play the changes from the upstream on your head 
+
+Typically, you would use git rebase to:
+    Edit previous commit messages
+    Combine multiple commits into one
+    Delete or revert commits that are no longer necessary
+
+13. How will you know in Git if a branch has already been merged into master?
+    To know if a branch has been merged into master or not you can use the below commands:
+    git branch –-merged It lists the branches that have been merged into the current branch.
+    git branch –-no-merged It lists the branches that have not been merged.
+
+14.  What is Git fork? What is difference between fork, branch and clone?
+        - A fork is a remote, server-side copy of a repository, distinct from the original.
+        - A clone is not a fork; a clone is a local copy of some remote repository. 
+          When you clone, you are actually copying the entire source repository, including all the history and branches.
+        -A branch is a mechanism to handle the changes within a single repository in order to eventually merge them with
+         the rest of code
+15. What's the difference between a "pull request" and a "branch"?
+    - A branch is a development thread where you can work locally to make changes before submiting them to the upstream.
+    - A pull request is when you fork a repo, work on it locally, make some changes, and submit the changes to the upstream. essentially
+    putting your code in someone elses codebase .
+
+16. Tell me the difference between HEAD, working tree and index, in Git?
+    - The working tree/working directory/workspace is the directory tree of (source) files that you see and edit.
+    - The index/staging area is a single, large, binary file in <baseOfRepo>/.git/index, which lists all files in the current branch, 
+     their sha1 checksums, time stamps and the file name - it is not another directory with a copy of files in it.
+    - HEAD is the last commit on the currently checked out branch.
+
+17. 
