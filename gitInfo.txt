@@ -1,0 +1,17 @@
+1. What is the difference between git and GitHub. 
+
+git is an open source distributed version control system. git allows you to set up working directories and track changes
+in the files in the directory. This allows you to develop locally, create banches, log and revert project changes. 
+GitHub is an online hosting service for git repos. This allows you to build an collaborate on projects together. This makes it easy for
+companys, and open source groups to fork repos, create local copies of the application, and submit pull requests to the master copy.
+
+2. How do you write a commit message. 
+
+You can write a simple commit message by writting the following line:
+
+$ git commit -a
+
+The a flag tells the command to automatically stage files that have been modified and deleted, but new files you have not
+told Git about are not affected. This command by default opens a vim editior allowing you to write a message decribing the changes in the commit.
+It is important that this message highlights the file changes incase you need to trace when errors or issues arise in the application.
+
