@@ -141,3 +141,5 @@ Typically, you would use git rebase to:
     - The index/staging area is a single, large, binary file in <baseOfRepo>/.git/index, which lists all files in the current branch, 
      their sha1 checksums, time stamps and the file name - it is not another directory with a copy of files in it.
     - HEAD is the last commit on the currently checked out branch.
+
+17. What are the advantages of using GIT?
