@@ -144,13 +144,8 @@ Typically, you would use git rebase to:
 
 17. What are the advantages of using GIT?
 	a) Data redundancy and replication
-
 	b) High availability
-
-	c) Only one.git directory per repository
-
+	c) Only one .git directory per repository
 	d) Superior disk utilization and network performance
-
 	e) Collaboration friendly
-
 	f) Any sort of projects can use GIT
