@@ -143,3 +143,14 @@ Typically, you would use git rebase to:
     - HEAD is the last commit on the currently checked out branch.
 
 17. What are the advantages of using GIT?
+	a) Data redundancy and replication
+
+	b) High availability
+
+	c) Only one.git directory per repository
+
+	d) Superior disk utilization and network performance
+
+	e) Collaboration friendly
+
+	f) Any sort of projects can use GIT
