@@ -73,6 +73,7 @@ let evens = [0,2,4,6,8,10];
 let odds = [1,3,5,7,9,11];
 
 function combinedArr(arr1,arr2){
+    // Example of array spreadng
     let combined = [...arr1, ...arr2];
     return combined;
 }
@@ -95,8 +96,7 @@ function simpleSort(arr){
 }
 
 
-console.log(`Simple Sort Test`);
-console.log(JSON.stringify(simpleSort(unsorted)) === JSON.stringify([3,5,6,9,11,12,15,17,22,24]));
+console.log(`Generate a random array of length n Test`);
 // 6. Write a function that returns a random array of length n 
 
 function generateRandomArray(length){
@@ -122,6 +122,7 @@ console.log(simpleSort(combinedArr(generateRandomArray(12), generateRandomArray(
 const axios = require('axios');
 async function getGitHubInfo(){
     const data = await axios.get('https://api.github.com/users/abdulamite');
+    // example of object destructuring
     const {name, company} = data.data
     console.log(name, company);
     return data;
