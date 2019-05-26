@@ -1,3 +1,6 @@
-Haters
-index.html
 /node_modules
+./sql/*.sql
+/sql
+*.csv
+NYU_Appointment_queue_config.js
+generate.js
